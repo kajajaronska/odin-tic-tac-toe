@@ -12,16 +12,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 100px;
     width: 100vw;
     height: 100vh;
 }
 
+
+/****************************/
+/* GAME BOARD STYLING */
+/****************************/
 .gameboard {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
 }
-
 
 .gameboard__tile:nth-child(3),
 .gameboard__tile:nth-child(4),
@@ -44,8 +49,14 @@ body {
 }
 
 .gameboard__tile {
-    text-align: center;
-    
+    text-align: center; 
 }
 
+/****************************/
+/* PLAYERS SECTION STYLING */
+/****************************/
 
+.players {
+    display: flex;
+    gap: 100px;
+}
