@@ -27,17 +27,28 @@
         <!-- PLAYERS SECTION WITH SCOREBOARD -->
         <section class="players">
         <div class="players__tile">
-            <div>Player One</div>
+            <div>Player X</div>
             <div class="players__name">Kaja</div>
             <div class="players__score">3</div>
         </div>
 
         <div class="players__tile">
-            <div>Player Two</div>
+            <div>Player O</div>
             <div class="players__name">Michael</div>
             <div class="players__score">2</div>
         </div>
    
         </section>
+
+        <div class="modal">
+            <div class="modal__content">
+            <h3 class="modal__header">Are you ready for Tic-Tac-Toe?❌⭕</h3>
+            <form action="" method="get" class="modal__form">
+                <div class=""><label for="playerOneName">Player One</label><input type="text" name="playerOneName" id="playerOneName"></div>
+                <div><label for="playerTwoName">Player Two</label><input type="text" name="playerTwoName" id="playerTwoName"></div>
+                <div><label for="rounds">How many rounds?</label><input type="number" name="rounds" id="rounds"></div>
+                <div><button type="submit">Let's Go! </button></div>
+            </form>
+        </div>
 </body>
 </html>
