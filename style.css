@@ -6,6 +6,9 @@
     box-sizing: border-box;
   }
   
+html {
+    font-size: 62.5%;
+}
 
 body {
     background-color: rgb(181, 219, 219);
@@ -13,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 100px;
+    gap: 10rem;
     width: 100vw;
     height: 100vh;
 }
@@ -24,8 +27,8 @@ body {
 /****************************/
 .gameboard {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 10rem);
+    grid-template-rows: repeat(3, 10rem);
 }
 
 .gameboard__tile:nth-child(3),
@@ -50,6 +53,7 @@ body {
 
 .gameboard__tile {
     text-align: center; 
+    font-size: 10rem;
 }
 
 /****************************/
@@ -58,5 +62,6 @@ body {
 
 .players {
     display: flex;
-    gap: 100px;
+    gap: 10rem;
+    font-size: 7rem;
 }
