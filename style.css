@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
 
 /* Global reset */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 /****************************/
@@ -17,60 +17,58 @@ html {
 /****************************/
 
 :root {
-    --font-family: 'Cutive Mono', monospace;
-    --prussian-blue: #0b3954;
-    --beau-blue: #bfd7ea; 
-    --bittersweet: #FF6663;
-    --arctic-lime: #E0FF4F;
-    --white: #FEFFFE;  
+  --font-family: "Cutive Mono", monospace;
+  --prussian-blue: #0b3954;
+  --beau-blue: #bfd7ea;
+  --bittersweet: #ff6663;
+  --arctic-lime: #e0ff4f;
+  --white: #fefffe;
 }
-
-
 
 body {
-    background-color: rgb(181, 219, 219);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10rem;
-    width: 100vw;
-    height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10rem;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-family);
 }
-
 
 /****************************/
 /* GAME BOARD STYLING */
 /****************************/
 .gameboard {
-    display: grid;
-    grid-template-columns: repeat(3, 10rem);
-    grid-template-rows: repeat(3, 10rem);
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: repeat(3, 10rem);
 }
 
 .gameboard__tile:nth-child(3),
 .gameboard__tile:nth-child(4),
 .gameboard__tile:nth-child(5),
-.gameboard__tile:nth-child(6){
-    border-bottom: solid blue 1px;
+.gameboard__tile:nth-child(6) {
+  border-bottom: solid var(--beau-blue) 0.5rem;
 }
 
 .gameboard__tile:nth-child(7),
 .gameboard__tile:nth-child(8) {
-    border-right: solid blue 1px;
+  border-right: solid var(--beau-blue) 0.5rem;
 }
 
 .gameboard__tile:nth-child(1),
 .gameboard__tile:nth-child(2),
 .gameboard__tile:nth-child(4),
 .gameboard__tile:nth-child(5) {
-    border-bottom: solid blue 1px;
-    border-right: solid blue 1px;
+  border-bottom: solid var(--beau-blue) 0.5rem;
+  border-right: solid var(--beau-blue) 0.5rem;
 }
 
 .gameboard__tile {
-    text-align: center; 
-    font-size: 10rem;
+  text-align: center;
+  font-size: 10rem;
 }
 
 /****************************/
@@ -78,9 +76,9 @@ body {
 /****************************/
 
 .players {
-    display: flex;
-    gap: 10rem;
-    font-size: 7rem;
+  display: flex;
+  gap: 10rem;
+  font-size: 7rem;
 }
 
 /****************************/
@@ -88,32 +86,87 @@ body {
 /****************************/
 
 .modal {
-    position: fixed;
-    top: 0;;
-    left: 0;
-    background-color: aliceblue;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: auto; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: aliceblue;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  /* opacity: 0; */
 }
 
 .modal__content {
-    position: absolute;
-    background-color: aliceblue;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    /* width: 0rem; */
+  position: absolute;
+  background-color: aliceblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  border-radius: 0.5rem;
+  box-shadow: rgba(245, 245, 245, 0.15) 0px 5px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  padding: 2rem;
 
-    padding: 3rem;
+  font-size: 2rem;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .modal__form input,
 .modal__form label {
-    width: 10rem;
+  width: 20rem;
+  height: 3rem;
+  font-size: 2rem;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.modal__form input {
+  border: none;
+  font-family: var(--font-family);
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.modal__form input:focus {
+  outline: 0.2rem solid var(--arctic-lime);
+}
+
+.modal__form label {
+    padding-top: 0.3rem;
+}
+
+.form__row {
+  display: flex;
+}
+
+.form__button {
+    align-self: flex-end;
+}
+
+.form__button button {
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--prussian-blue);
+    color: var(--arctic-lime);
+    height: 3rem;
+    margin-top: 3rem;
+    margin-right: 0.7rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1rem;
 }
