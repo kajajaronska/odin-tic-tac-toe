@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
 /* Global reset */
 
 * {
@@ -5,10 +7,25 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
 html {
     font-size: 62.5%;
 }
+
+/****************************/
+/* VARIABLES */
+/****************************/
+
+:root {
+    --font-family: 'Cutive Mono', monospace;
+    --prussian-blue: #0b3954;
+    --beau-blue: #bfd7ea; 
+    --bittersweet: #FF6663;
+    --arctic-lime: #E0FF4F;
+    --white: #FEFFFE;  
+}
+
+
 
 body {
     background-color: rgb(181, 219, 219);
