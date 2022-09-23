@@ -36,24 +36,32 @@ const gameFlow = (()=> {
 // Gameboard - module, because we only need one
 const game = (() => {
 
-    let board = {
-        // [0, 1, 2]
-    a: ['X','O','X'],
-    b: ['O','X','O'],
-    c: ['O','O','X']}
+    // let board = {
+    //     // [0, 1, 2]
+    // a: ['1','2','3'],
+    // b: ['4','5','6'],
+    // c: ['7','8','9']}
+
+    let board = ['X','O','X','O','','X','X','O',''];
     
     // Function that will render the contents of the gameboard array to the webpage
     let displayBoard = () => {
+
+        let tiles = document.querySelectorAll(".gameboard__tile");
         
+        for (let i=0; i < tiles.length; i++) {        
+            tiles[i].textContent = board[i];
+        }
+               
     }
 
+    displayBoard();
 
-    return {board}
+    return {board}; // How can we access anything from the module? 
 
 })()
 
-
-// console.log(gameBoard.a)
+// console.log(board)
 
 
 // Display Controller - module, because we only need one
