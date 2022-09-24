@@ -94,7 +94,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: auto;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .modal__content {
